@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra các số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let numbers = Number(prompt("Số lượng số nguyên tố đầu tiên muốn in ra"));
+        let amount = 0;
+        let result;
+
+        function isSNT(N) {
+            if(N < 2){
+                return false;
+            }
+            for (let i = 2; i < (N-1); i++){
+                if (N % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let i=2;
+        while(amount < numbers){
+
+            if (isSNT(i) === true) {
+                amount = amount + 1;
+                 result = i;
+                document.write(result + "; ");
+            }
+            i = i + 1
+        }
+    </script>
+</body>
+</html>
